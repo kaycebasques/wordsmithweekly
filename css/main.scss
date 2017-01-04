@@ -1,5 +1,70 @@
 ---
-# This YAML front matter block is needed, even though it's empty.
 ---
 
-/* Add CSS here that you want on every page. */
+/* Variables */
+
+$theme-primary: black;
+$theme-secondary: white;
+$standard-spacing: 1em;
+
+/* Placeholders */
+
+/* Elements */
+
+body {
+  /* https://css-tricks.com/why-ems/ */
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Classes */
+
+.content {
+  min-height: 75vh;
+  margin-top: 4em;
+  p {
+    margin: $standard-spacing;
+  }
+}
+
+.content__title {
+  $size: 1.5em;
+  font-size: $size;
+  margin: $standard-spacing / $size * 1em;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  /* Use em to be able to resize text on scroll */
+  height: 3em;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  background-color: $theme-primary;
+}
+
+.header__title {
+  font-size: 1em;
+  margin: 1em;
+  color: $theme-secondary;
+}
+
+.header__title-link {
+  text-decoration: none;
+  &:visited {
+    color: $theme-secondary;
+  }
+}
+
+.footer {
+  height: 10vh;
+  background-color: $theme-primary;
+}
+
+.footer__text {
+  color: $theme-secondary;
+}
