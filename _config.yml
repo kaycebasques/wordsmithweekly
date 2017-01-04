@@ -13,12 +13,13 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your Title
-email: you@email.com
+title: The Wordsmith Weekly
+author: Kayce Basques
+email: kaycebasques@gmail.com
 baseurl: ""
-url: "https://example.com" # the base hostname & protocol for your site
-twitter_username: tweetalicious
-github_username:  githubalicious
+url: "https://wordsmithweekly.com"
+twitter_username: kaycebasques
+github_username: kaycebasques
 
 # Build settings
 markdown: kramdown
