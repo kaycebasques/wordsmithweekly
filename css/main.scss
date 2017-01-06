@@ -10,6 +10,9 @@ $hide-header-animation-time: 200ms;
 $show-header-animation-time: 200ms;
 $delay: 400ms;
 $minimum-tappable-length: 44px;
+$font-primary: black;
+$font-secondary: white;
+$quote-background-color: rgba(128, 128, 128, 0.18);
 
 /* Placeholders */
 
@@ -27,12 +30,16 @@ body {
 
 .content {
   min-height: 80vh;
-  margin-top: 4em;
+  margin-top: 3em;
   padding: $standard-spacing;
+  blockquote {
+    background-color: $quote-background-color;
+    font-style: italic;
+    padding: $standard-spacing;
+    margin: $standard-spacing;
+  }
   h2 {
-    $size: 1.3em;
-    /* TODO DRY */
-    font-size: $size;
+    font-size: 1.3em;
   }
 }
 
@@ -40,11 +47,19 @@ body {
   font-style: italic;
 }
 
+.content__leader {
+  float: left;
+  max-width: 25vw;
+}
+
+.content__summary {
+  font-style: italic;
+  /* TODO rename */
+  background-color: $quote-background-color;
+}
+
 .content__title {
-  $size: 1.5em;
-  /* TODO DRY */
-  font-size: $size;
-  margin: $standard-spacing / $size * 1em;
+  font-size: 1.5em;
 }
 
 .footer {
@@ -88,7 +103,7 @@ body {
   font-size: 1em;
   font-weight: normal;
   margin: $standard-spacing;
-  color: $theme-secondary;
+  color: $font-secondary;
 }
 
 .header__title-link {
@@ -131,10 +146,17 @@ body {
 
 .post__date {
   font-size: 0.8em;
+  font-style: italic;
 }
 
 .post__link {
+  text-decoration: none;
+  color: $font-primary;
+}
 
+.post__summary {
+  font-style: italic;
+  font-size: 0.8em;
 }
 
 .posts {
