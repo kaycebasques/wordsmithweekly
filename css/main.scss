@@ -6,6 +6,10 @@
 $theme-primary: black;
 $theme-secondary: white;
 $standard-spacing: 1em;
+$hide-header-animation-time: 200ms;
+$show-header-animation-time: 200ms;
+$delay: 400ms;
+$minimum-tappable-length: 44px;
 
 /* Placeholders */
 
@@ -14,6 +18,7 @@ $standard-spacing: 1em;
 body {
   /* https://css-tricks.com/why-ems/ */
   font-size: 18px;
+  font-family: Sans-Serif;
   margin: 0;
   padding: 0;
 }
@@ -21,17 +26,32 @@ body {
 /* Classes */
 
 .content {
-  min-height: 75vh;
+  min-height: 80vh;
   margin-top: 4em;
-  p {
-    margin: $standard-spacing;
+  padding: $standard-spacing;
+  h2 {
+    $size: 1.3em;
+    /* TODO DRY */
+    font-size: $size;
   }
+}
+
+.content__date {
+  font-style: italic;
 }
 
 .content__title {
   $size: 1.5em;
+  /* TODO DRY */
   font-size: $size;
   margin: $standard-spacing / $size * 1em;
+}
+
+.footer {
+  border-top: 1px solid $theme-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header {
@@ -43,13 +63,31 @@ body {
   height: 3em;
   width: 100vw;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background-color: $theme-primary;
+}
+
+.header--hidden {
+  transform: translateY(-100%);
+  transition: all $hide-header-animation-time ease;
+}
+
+.header--visible {
+  transform: none;
+  transition: all 500ms ease;
+  transition-delay: $show-header-animation-time + $delay;
+}
+
+.header__menu {
+  margin: $standard-spacing;
+  background-color: $theme-secondary;
+  color: $theme-primary;
 }
 
 .header__title {
   font-size: 1em;
-  margin: 1em;
+  font-weight: normal;
+  margin: $standard-spacing;
   color: $theme-secondary;
 }
 
@@ -60,11 +98,51 @@ body {
   }
 }
 
-.footer {
-  height: 10vh;
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: $theme-primary;
+  height: 100vh;
+  width: 100vw;
 }
 
-.footer__text {
-  color: $theme-secondary;
+.nav--hidden {
+  transform: translateY(-100%);
+  transition: all 400ms ease;
+}
+
+.nav--visible {
+  transform: none;
+  transition: all 400ms ease;
+  transition-delay: $hide-header-animation-time + $delay;
+}
+
+.nav__item {
+  min-height: $minimum-tappable-length;
+}
+
+.post {
+  min-height: 50px;
+  &:not(:last-child) {
+    border-bottom: 1px solid $theme-primary;
+  }
+}
+
+.post__date {
+  font-size: 0.8em;
+}
+
+.post__link {
+
+}
+
+.posts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media screen and (min-width: 800px) {
+  /* Show the nav on the right? */
 }

@@ -7,20 +7,31 @@
       {% endif %}
       {{ site.title }}
     </title>
+    <!-- TODO add google analytics -->
     <link rel="stylesheet" type="text/css" href="/css/main.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="/js/main.js" async></script>
   </head>
   <body>
-    <header class="header">
+    <header class="header header--visible">
       <h1 class="header__title">
         <a href="/" class="header__title-link">{{ site.title }}</a>
       </h1>
+      <button class="header__menu">Menu</button>
     </header>
+    <nav class="nav nav--hidden">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <button class="nav__close">Close</button>
+        </li>
+        <li class="nav__item">Home</li>
+        <li class="nav__item">About</li>
+      </ul>
+    </nav>
     <article class="content">{{ content }}</article>
     <footer class="footer">
       <p class="footer__text">
-        &copy; 2016 {{ site.author }}. All Rights Reserved.
+        &copy; 2016 {{ site.author }}
       </p>
     </footer>
   </body>
