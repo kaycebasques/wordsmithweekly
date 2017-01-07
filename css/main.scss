@@ -5,14 +5,15 @@
 
 $theme-primary: black;
 $theme-secondary: white;
-$standard-spacing: 1em;
+$major-spacing: 1em;
+$minor-spacing: $major-spacing / 2;
 $hide-header-animation-time: 200ms;
 $show-header-animation-time: 200ms;
 $delay: 400ms;
 $minimum-tappable-length: 44px;
 $font-primary: black;
 $font-secondary: white;
-$quote-background-color: rgba(128, 128, 128, 0.18);
+$alternative-background: rgba(128, 128, 128, 0.18);
 
 /* Placeholders */
 
@@ -29,18 +30,22 @@ body {
 /* Classes */
 
 .content {
-  min-height: 80vh;
+  min-height: 75vh;
   margin-top: 3em;
-  padding: $standard-spacing;
-  blockquote {
-    background-color: $quote-background-color;
-    font-style: italic;
-    padding: $standard-spacing;
-    margin: $standard-spacing;
-  }
+  padding: $major-spacing;
   h2 {
     font-size: 1.3em;
   }
+  ul {
+    padding-left: $major-spacing + $minor-spacing;
+  }
+}
+
+.content__quote {
+  background-color: $alternative-background;
+  font-style: italic;
+  padding: $minor-spacing;
+  margin: 0;
 }
 
 .content__date {
@@ -52,14 +57,21 @@ body {
   max-width: 25vw;
 }
 
+.content__quote-list {
+  margin-top: 0;
+}
+
 .content__summary {
   font-style: italic;
   /* TODO rename */
-  background-color: $quote-background-color;
+  background-color: $alternative-background;
+  padding: $minor-spacing;
 }
 
 .content__title {
   font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 0.5em;
 }
 
 .footer {
@@ -94,15 +106,16 @@ body {
 }
 
 .header__menu {
-  margin: $standard-spacing;
+  margin: $major-spacing;
   background-color: $theme-secondary;
   color: $theme-primary;
+  border: none;
 }
 
 .header__title {
   font-size: 1em;
   font-weight: normal;
-  margin: $standard-spacing;
+  margin: $major-spacing;
   color: $font-secondary;
 }
 
@@ -114,6 +127,7 @@ body {
 }
 
 .nav {
+  display: none; /* TODO remove when nav is acceptable */
   position: fixed;
   top: 0;
   left: 0;
@@ -135,6 +149,27 @@ body {
 
 .nav__item {
   min-height: $minimum-tappable-length;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  &:not(:last-child) {
+    border-bottom: 1px solid $theme-secondary;
+  }
+}
+
+.nav__link {
+  text-decoration: none;
+  color: $theme-secondary;
+  flex-grow: 1;
+  width: 100%;
+  padding-left: $major-spacing;
+  line-height: 100%;
+}
+
+.nav__list {
+  padding: 0;
 }
 
 .post {
@@ -157,6 +192,8 @@ body {
 .post__summary {
   font-style: italic;
   font-size: 0.8em;
+  background-color: $alternative-background;
+  padding: $minor-spacing;
 }
 
 .posts {
@@ -166,5 +203,13 @@ body {
 }
 
 @media screen and (min-width: 800px) {
-  /* Show the nav on the right? */
+  .content {
+    max-width: 800px;
+  }
+  .content__leader {
+    max-width: 15vw;
+  }
+  .header__menu {
+    display: none;
+  }
 }
