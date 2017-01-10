@@ -4,7 +4,7 @@ title: Effective Education
 date: 2017-01-06 09:37:00
 permalink: blog/effective-education
 summary: "Technical writers, and the knowledge professions in general, are
-in the business of education. How do we impart knowledge to another person
+in the business of education. How do we impart knowledge to others
 as quickly and effectively as possible? Where should we look for models of
 effective education?"
 ---
@@ -82,18 +82,17 @@ education system to technical writing.
 
 **Practice-Based Fluency (#2)**
 
-Make docs as interactive as possible. This is obvious for tutorials, but don't
-stop there. For example, maybe API references can incorporate interactive
-elements. At the bottom of a function's reference, there could be a sandbox
-for trying out that function, or a set of problems that challenge you on how
-to use the function in different scenarios.
+Make docs as interactive as possible. To me, this is more obvious for
+tutorials, but there's no reason to stop there. For example, maybe API
+references can incorporate interactive elements. At the bottom of a
+function's reference, there could be a sandbox for trying out that
+function, or a set of problems that challenge you on how to use the function
+in different scenarios.
 
-In the spirit of "handling two or three intertwined hazards at once",
-organize docs according to the real-world tasks that users face, not by
-features. Even if you have a task-based information architecture, be careful
-about unconsciously creating content based on the mental model that you've
-laid out. You may be missing mission-critical topics, just because they don't
-match your model.
+In my own products, I'm slowly but surely shipping a whole set of interactive
+tutorials for Chrome DevTools. [Get Started with Debugging JavaScript in Chrome
+DevTools](https://developers.google.com/web/tools/chrome-devtools/javascript/)
+is my latest shipment.
 
 **Forward- And Reverse-Thinking (#3)**
 
@@ -107,17 +106,15 @@ spotting bottlenecks.
 
 **Prioritized Training (#4)**
 
-When it comes to docs, I think there's a cult of "completeness". By that I
-mean there's an unspoken assumption that we need to document our products
-comprehensively. This comes from both within (i.e. the tech writer community)
-and without (i.e. pressure from product managers or engineers for "content
-completeness"). We write one tutorial, guide, and reference for a
-mission-critical topic, and then we move on to some lower-priority topic.
-
-If Charlie's right, though, then maybe our time would be better spent
-creating more content for the mission-critical topics. For example, in the
-Chrome DevTools docs, maybe I should create multiple tutorials on how to
-debug JavaScript, with each tutorial covering a slightly different bug.
+When it comes to docs, I think there's a cult of "completeness". By that I mean
+there's an unspoken assumption that we need to document our products
+comprehensively. This unquestioned assumption might be harming our users.
+I think it's pretty common to write one tutorial, guide, and reference
+for a mission-critical topic, consider the job done, and move on to some
+other topic, possibly lower-priority. *Maybe our users need more content
+than just one tutorial / guide / reference to really master the topic*. In
+which case, our time and energy would be better spent creating more content
+on the mission-critical topic.
 
 **Checklist Routines (#5)**
 
@@ -129,15 +126,17 @@ on. Organize tasks and workflows into numbered-lists as much as possible.
 Duolingo has an excellent knowledge-maintenance routine. Duolingo keeps track
 of how long it's been since you completed a lesson, and
 sends you a reminder to brush up on your skills when you've been slacking.
+Maybe we can port this model to our docs?
 
-This would require a new model of docs, though: an initial lesson catered
+This would require a new model, though: an initial lesson catered
 to first-time learners, and then follow-up lessons structured as review
 content.
 
 ## Discussion
 
-Agree? Disagree? Got more ideas on this topic? 
+Agree? Disagree? Got more ideas on this topic? Let me know, and I'd be happy
+to add your contributions to the end of this article.
 
 * If you're the twitting type, send me a twit at
   [@kaycebasques](https://twitter.com/kaycebasques).
-* Open your window and start shouting my name really loud until I respond.
+* Email me at `kayce@basqu.es`.
