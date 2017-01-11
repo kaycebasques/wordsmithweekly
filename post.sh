@@ -2,7 +2,7 @@
 
 DATE=$(date +%Y-%m-%d)
 TIME=$(date +%H:%M:%S)
-FILE="_posts/$DATE-TODO.markdown"
+FILE="_posts/$DATE-$1.markdown"
 
 echo "Making a new post..."
 
@@ -16,6 +16,7 @@ layout: post
 title: TODO
 date: $DATE $TIME
 permalink: TODO
+summary: TODO
 ---" > $FILE
 
 echo "New post $FILE successfully created."
