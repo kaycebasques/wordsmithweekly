@@ -188,6 +188,9 @@ body {
   width: 100%;
   padding-left: $major-spacing;
   line-height: 100%;
+  &:visited {
+    color: $theme-secondary;
+  }
 }
 
 .nav__link-text {
