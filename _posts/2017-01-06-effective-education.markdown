@@ -134,9 +134,8 @@ content.
 
 ## Discussion
 
-Agree? Disagree? Got more ideas on this topic? Let me know, and I'd be happy
-to add your contributions to the end of this article.
+Agree? Disagree? Got more ideas on this topic?
 
-* If you're the twitting type, send me a twit at
-  [@kaycebasques](https://twitter.com/kaycebasques).
-* Email me at `kayce@basqu.es`.
+* [Twitter][twitter]
+
+[twitter]: https://twitter.com/intent/tweet?text=%40kaycebasques%20re%3A%20%22Effective%20Education%22...
