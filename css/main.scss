@@ -15,9 +15,19 @@ $font-primary: black;
 $font-secondary: white;
 $font-regular-size: 18px;
 $font-small-size: 12px;
-$alternative-background: rgba(128, 128, 128, 0.18);
+$alternative-background: rgb(232, 232, 232);
 
 /* Placeholders */
+
+%button {
+  background-color: $theme-secondary;
+  color: $theme-primary;
+  border: none;
+  font-size: $font-regular-size;
+  line-height: 100%;
+  padding: $minor-spacing;
+  margin: $minor-spacing;
+}
 
 %nav__item {
   height: 3em;
@@ -120,11 +130,7 @@ body {
 }
 
 .header__menu {
-  margin: $major-spacing;
-  background-color: $theme-secondary;
-  color: $theme-primary;
-  border: none;
-  font-size: $font-small-size;
+  @extend %button;
 }
 
 .header__title {
@@ -162,10 +168,7 @@ body {
 }
 
 .nav__close {
-  border: none;
-  background-color: $theme-secondary;
-  font-size: $font-small-size;
-  margin: $major-spacing;
+  @extend %button;
 }
 
 .nav__header {
