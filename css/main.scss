@@ -78,7 +78,7 @@ body {
 
 .content__leader {
   float: left;
-  max-width: 25vw;
+  max-width: 35vw;
 }
 
 .content__quote-list {
@@ -87,7 +87,6 @@ body {
 
 .content__summary {
   font-style: italic;
-  /* TODO rename */
   background-color: $alternative-background;
   padding: $minor-spacing;
 }
