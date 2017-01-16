@@ -137,5 +137,9 @@ content.
 Agree? Disagree? Got more ideas on this topic?
 
 * [Twitter][twitter]
+* [r/technicalwriting][reddit]
+* [Hacker News][HN]
 
 [twitter]: https://twitter.com/intent/tweet?text=%40kaycebasques%20re%3A%20%22Effective%20Education%22...
+[reddit]: https://www.reddit.com/r/technicalwriting/comments/5oegf0/effective_education/
+[HN]: https://news.ycombinator.com/item?id=13414089
