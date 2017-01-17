@@ -140,6 +140,7 @@ body {
 }
 
 .header__title-link {
+  color: $theme-secondary;
   text-decoration: none;
   &:visited {
     color: $theme-secondary;
