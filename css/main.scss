@@ -76,6 +76,10 @@ body {
   font-style: italic;
 }
 
+.content__img {
+  max-width: 100%;
+}
+
 .content__leader {
   float: left;
   max-width: 35vw;
@@ -230,9 +234,9 @@ body {
   list-style: none;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 700px) {
   .content {
-    max-width: 800px;
+    max-width: 700px;
   }
   .content__leader {
     max-width: 15vw;
@@ -240,4 +244,5 @@ body {
   .header__menu {
     display: none;
   }
+  /* TODO display the nav below the content */
 }
