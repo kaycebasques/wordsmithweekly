@@ -7,8 +7,8 @@ summary: "The holy trinity for technical writers is tutorials,
 guides, and references. But maybe it's time for a fourth doc type."
 ---
 
-<img src="/imgs/rabbit.png" class="content__leader"
-     alt="An Irrelevant Image Of The White Rabbit"/>
+<img src="/imgs/mad-tea-party.png" class="content__leader"
+     alt="An Irrelevant Image Of The Mad Tea Party"/>
 
 There's a phenomenon in psychology called [levels of processing][LOP] which,
 I think, has a lot of implications for how we should go about this whole
