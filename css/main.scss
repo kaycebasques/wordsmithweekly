@@ -59,6 +59,7 @@ body {
   min-height: 75vh;
   margin-top: 3em;
   padding: $major-spacing;
+  max-width: 700px;
   h2 {
     font-size: 1.3em;
   }
@@ -84,7 +85,7 @@ body {
 
 .content__leader {
   float: left;
-  max-width: 35vw;
+  max-width: 25vw;
 }
 
 .content__quote-list {
