@@ -25,4 +25,4 @@ description: "The technical writing blog of Kayce Basques."
 # Build settings
 markdown: kramdown
 
-exclude: [README.md, Gemfile, Gemfile.lock]
+exclude: [README.md, Gemfile, Gemfile.lock, vendor]
