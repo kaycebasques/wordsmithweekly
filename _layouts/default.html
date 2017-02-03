@@ -25,8 +25,30 @@
   </head>
   <body>
     <header class="header header--visible">
-      <h1 class="header__title">
-        <a href="/" class="header__title-link">{{ site.title }}</a>
+      <h1 class="header__title header__title--visible">
+        <a href="/" class="header__title-link">
+          <!-- Epic hack! Whitespace characters between spans create new
+               text blocks, which displays as spaces between elements.
+               http://stackoverflow.com/a/22689952/1669860 -->
+          <span class=" header__title-text header__title-text-1">T</span><!--
+          --><span class="header__title-text header__title-text-2">h</span><!--
+          --><span class="header__title-text header__title-text-3">e</span>
+          <span class="header__title-text header__title-text-4">W</span><!--
+          --><span class="header__title-text header__title-text-5">o</span><!--
+          --><span class="header__title-text header__title-text-6">r</span><!--
+          --><span class="header__title-text header__title-text-7">d</span><!--
+          --><span class="header__title-text header__title-text-8">s</span><!--
+          --><span class="header__title-text header__title-text-9">m</span><!--
+          --><span class="header__title-text header__title-text-10">i</span><!--
+          --><span class="header__title-text header__title-text-11">t</span><!--
+          --><span class="header__title-text header__title-text-12">h</span>
+          <span class="header__title-text header__title-text-13">W</span><!--
+          --><span class="header__title-text header__title-text-14">e</span><!--
+          --><span class="header__title-text header__title-text-15">e</span><!--
+          --><span class="header__title-text header__title-text-16">k</span><!--
+          --><span class="header__title-text header__title-text-17">l</span><!--
+          --><span class="header__title-text header__title-text-18">y</span>
+        </a>
       </h1>
       <button class="header__menu">Menu</button>
     </header>

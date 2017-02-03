@@ -8,14 +8,20 @@ $theme-secondary: white;
 $major-spacing: 1em;
 $minor-spacing: $major-spacing / 2;
 $hide-header-animation-time: 200ms;
+$hide-nav-animation-time: 400ms;
 $show-header-animation-time: 200ms;
-$delay: 400ms;
+$delay: 200ms;
 $minimum-tappable-length: 44px;
 $font-primary: black;
 $font-secondary: white;
 $font-regular-size: 18px;
 $font-small-size: 12px;
 $alternative-background: rgb(232, 232, 232);
+$title-character-count: 18;
+$title-character-delay: 30ms;
+$title-character-animation-time: 200ms;
+$title-total-animation-time: $title-character-count * $title-character-delay +
+    $title-character-animation-time;
 
 /* Placeholders */
 
@@ -128,6 +134,7 @@ body {
 .header--hidden {
   transform: translateY(-100%);
   transition: all $hide-header-animation-time ease;
+  transition-delay: $title-total-animation-time + $delay;
 }
 
 .header--visible {
@@ -155,6 +162,37 @@ body {
   }
 }
 
+.header__title-text {
+  display: inline-block;
+  transition: all 200ms ease;
+  /* http://blog.teamtreehouse.com/sass-tip-double-ampersand-selector */
+  .header__title--hidden & {
+    transform: translateY(-400%);
+  }
+  .header__title--visible & {
+    transform: none;
+  }
+}
+
+@for $i from 1 through $title-character-count {
+  .header__title-text-#{$i} {
+    .header__title--hidden & {
+      transition-delay: $i * $title-character-delay;
+    }
+    /* Showing the header title characters is the last component of the animation. Must wait
+       for following before initiating:
+       1. Nav menu animation.
+       2. Delay.
+       3. Header animation.
+       4. Delay. 
+       5. Animations of previous title characters. */
+    .header__title--visible & {
+      transition-delay: $hide-nav-animation-time + $delay + $show-header-animation-time + $delay +
+          ($i * $title-character-delay);
+    }
+  }
+}
+
 .nav {
   position: fixed;
   top: 0;
@@ -166,13 +204,14 @@ body {
 
 .nav--hidden {
   transform: translateY(-100%);
-  transition: all 400ms ease;
+  transition: all $hide-nav-animation-time ease;
 }
 
 .nav--visible {
   transform: none;
   transition: all 400ms ease;
-  transition-delay: $hide-header-animation-time + $delay;
+  transition-delay: $title-total-animation-time + $delay + $hide-header-animation-time +
+      $delay;
 }
 
 .nav__close {
