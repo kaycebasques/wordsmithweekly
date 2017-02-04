@@ -6,6 +6,9 @@ permalink: blog/google-analytics-user-explorer
 summary: Like voyeurism, but for technical writers.
 ---
 
+<img src="/imgs/cheshire.png" class="content__leader"
+     alt="A creepy photo of the Cheshire Cat."/>
+
 A few weeks back, I was scheming up complicated tools for tracking how users
 interact with my docs. My goal was to get a report on each user session: pages
 visited, page interactions, etc.
