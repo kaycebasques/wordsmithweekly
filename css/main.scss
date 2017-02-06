@@ -85,6 +85,22 @@ body {
   font-style: italic;
 }
 
+.content__feedback {
+  display: inline-block;
+}
+
+.content__feedback-answer {
+  font-size: 1em;
+}
+
+.content__feedback-response {
+  display: none;
+}
+
+.content__feedback-response--visible {
+  display: block;
+}
+
 .content__img {
   max-width: 100%;
 }

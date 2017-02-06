@@ -4,6 +4,7 @@ title: Analyzing Docs Journeys With Google Analytics User Explorer
 date: 2017-02-04 13:34:21
 permalink: blog/google-analytics-user-explorer
 summary: Like voyeurism, but for technical writers.
+feedback: /feedback/google-analytics-user-explorer.json
 ---
 
 <img src="/imgs/cheshire.png" class="content__leader"
@@ -14,6 +15,9 @@ interact with my docs. My goal was to get a report on each user session: pages
 visited, page interactions, etc.
 
 Turns out Google Analytics already has this feature. It's called User Explorer.
+
+{% feedback hallo world %}
+
 You can access it at **Reporting** > **Audience** > **User Explorer**.
 
 <img alt="Google Analytic's User Explorer." class="content__img"

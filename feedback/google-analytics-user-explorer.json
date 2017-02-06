@@ -1,0 +1,15 @@
+[
+  {
+    "question": "Have you heard of it?",
+    "answers": [
+      {
+        "button": "Yes",
+        "response": "Yes response"
+      },
+      {
+        "button": "No",
+        "response": "No response"
+      }
+    ]
+  }
+]
