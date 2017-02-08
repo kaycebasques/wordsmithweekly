@@ -80,6 +80,10 @@ body {
   font-size: 1em;
   border: none;
   padding: $minor-spacing;
+  &:active {
+    background-color: $theme-secondary;
+    color: $theme-primary;
+  }
 }
 
 .content__quote {

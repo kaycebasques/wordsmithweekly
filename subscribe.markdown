@@ -3,26 +3,20 @@ layout: post
 title: Subscribe
 ---
 
-Link to RSS feed: [https://wordsmithweekly.com/feed.xml][rss]
+## RSS
 
-[rss]: https://wordsmithweekly.com/feed.xml
+<a id="rss-url" href="/feed.xml">https://wordsmithweekly.com/feed.xml</a>
 
-<!--
+<button id="rss-button" class="content__button">Copy Link To Clipboard</button>
 
-I've got a simple RSS feed. It doesn't include the full content of the posts,
-but it does have a summary of each, akin to what you see on the homepage.
+## Email newsletter
 
-<button id="rss" class="content__button">Get Link to RSS Feed</button>
-
-<p id="rss-response" style="display:none">The link to the feed should be
-  copied to your clipboard now. If not, here's the direct link:
-  <a href="/feed.xml" id="rss-url">https://wordsmithweekly.com/feed.xml</a></p>
-
-Email newsletter coming <s>soon</s> whenever I get around to it :)
+Coming <s>soon</s> whenever I get around to it :)
 
 <script>
-  var rss = document.querySelector('#rss');
+  var rss = document.querySelector('#rss-button');
   rss.addEventListener('click', function() {
+    window.getSelection().removeAllRanges();
     var url = document.querySelector('#rss-url');
     var range = document.createRange();
     range.selectNode(url);
@@ -34,9 +28,6 @@ Email newsletter coming <s>soon</s> whenever I get around to it :)
     } catch (err) {
       ga('send', 'event', 'Subscribe', 'click', 'RSS', 0);
     }
-    document.querySelector('#rss-response').style.display = 'block';
     window.getSelection().removeAllRanges();
   });
 </script>
-
--->
