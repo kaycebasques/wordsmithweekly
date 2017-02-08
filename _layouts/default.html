@@ -14,9 +14,15 @@
         a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;
         m.parentNode.insertBefore(a,m)})(window,document,'script',
         'https://www.google-analytics.com/analytics.js','ga');
-  
         ga('create', 'UA-89855615-1', 'auto');
         ga('send', 'pageview');
+      } else {
+        function ga() {
+          console.info('tried calling ga() with following args:');
+          for (var i = 0; i < arguments.length; i++) {
+            console.info(arguments[i]);
+          }
+        }
       }
     </script>
     <link rel="stylesheet" type="text/css" href="/css/main.css"/>
