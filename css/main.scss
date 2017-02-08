@@ -74,6 +74,14 @@ body {
   }
 }
 
+.content__button {
+  background-color: $theme-primary;
+  color: $theme-secondary;
+  font-size: 1em;
+  border: none;
+  padding: $minor-spacing;
+}
+
 .content__quote {
   background-color: $alternative-background;
   font-style: italic;
@@ -198,7 +206,7 @@ body {
   top: 0;
   left: 0;
   background-color: $theme-primary;
-  height: 9em;
+  height: 12em;
   width: 100vw;
 }
 
