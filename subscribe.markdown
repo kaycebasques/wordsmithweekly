@@ -3,6 +3,12 @@ layout: post
 title: Subscribe
 ---
 
+Link to RSS feed: [https://wordsmithweekly.com/feed.xml][rss]
+
+[rss]: https://wordsmithweekly.com/feed.xml
+
+<!--
+
 I've got a simple RSS feed. It doesn't include the full content of the posts,
 but it does have a summary of each, akin to what you see on the homepage.
 
@@ -32,3 +38,5 @@ Email newsletter coming <s>soon</s> whenever I get around to it :)
     window.getSelection().removeAllRanges();
   });
 </script>
+
+-->
