@@ -84,11 +84,6 @@
         'nav--hidden');
   }
 
-  document.querySelector('.header__menu').addEventListener('click',
-      showNav);
-  document.querySelector('.nav__close').addEventListener('click',
-      showHeader);
-
   window.addEventListener('resize', function() {
     clearTimeout(resizeTimerId);
     resizeTimerId = setTimeout(updateLayout, 500);
