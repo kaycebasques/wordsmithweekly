@@ -35,18 +35,6 @@ $title-total-animation-time: $title-character-count * $title-character-delay +
   margin: $minor-spacing;
 }
 
-%nav__item {
-  height: 3em;
-  display: flex;
-  margin: 0;
-  padding: 0;
-  justify-content: flex-end;
-  align-items: center;
-  &:not(:last-child) {
-    border-bottom: 1px solid $theme-secondary;
-  }
-}
-
 /* Elements */
 
 body {
@@ -62,8 +50,12 @@ body {
 /* Classes */
 
 .content {
-  min-height: 75vh;
+  /* Haven't done the math to explain why it's 17.25em. Should move all these
+   * values into variables. */
+  min-height: calc(100vh - 17.25em);
   margin-top: 3em;
+  margin-left: auto;
+  margin-right: auto;
   padding: $major-spacing;
   max-width: 700px;
   h2 {
@@ -128,6 +120,13 @@ body {
   align-items: center;
   justify-content: center;
   width: 100vw;
+  background-color: $theme-primary;
+  height: 3em;
+}
+
+.footer__text {
+  font-size: 1em;
+  color: $theme-secondary;
 }
 
 .header {
@@ -139,24 +138,8 @@ body {
   height: 3em;
   width: 100vw;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background-color: $theme-primary;
-}
-
-.header--hidden {
-  transform: translateY(-100%);
-  transition: all $hide-header-animation-time ease;
-  transition-delay: $title-total-animation-time + $delay;
-}
-
-.header--visible {
-  transform: none;
-  transition: all 500ms ease;
-  transition-delay: $show-header-animation-time + $delay;
-}
-
-.header__menu {
-  @extend %button;
 }
 
 .header__title {
@@ -206,55 +189,28 @@ body {
 }
 
 .nav {
-  position: fixed;
-  top: 0;
-  left: 0;
   background-color: $theme-primary;
-  height: 12em;
   width: 100vw;
 }
 
-.nav--hidden {
-  transform: translateY(-100%);
-  transition: all $hide-nav-animation-time ease;
-}
-
-.nav--visible {
-  transform: none;
-  transition: all 400ms ease;
-  transition-delay: $title-total-animation-time + $delay + $hide-header-animation-time +
-      $delay;
-}
-
-.nav__close {
-  @extend %button;
-}
-
-.nav__header {
-  @extend %nav__item;
-  justify-content: flex-end;
-}
-
 .nav__item {
-  @extend %nav__item;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3em;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid $theme-secondary;
 }
 
 .nav__link {
-  display: flex;
-  align-items: center;
+  display: block;
   text-decoration: none;
   color: $theme-secondary;
-  flex-grow: 1;
-  width: 100%;
-  padding-left: $major-spacing;
-  line-height: 100%;
+  text-align: center;
   &:visited {
     color: $theme-secondary;
   }
-}
-
-.nav__link-text {
-
 }
 
 .nav__list {
@@ -295,41 +251,27 @@ body {
   }
   .content {
     max-width: 700px;
+    /* TODO figure out why it's 11.25em and move the values to variables */
+    min-height: calc(100vh - 11.25em);
+    margin-left: auto;
+    margin-right: auto;
   }
   .content__leader {
     max-width: 15vw;
   }
-  .header__menu {
-    display: none;
-  }
   .nav {
-    position: fixed;
-    /* (width of header) + (padding-top of content) */
-    top: 4em;
-    left: 700px;
-    margin-left: $major-spacing * 2;
-    max-width: 246px;
-    background-color: $alternative-background;
-    height: auto;
-  }
-  .nav__header {
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
   }
   .nav__item {
-    display: block;
-    height: auto;
-    border: none;
-    &:not(:last-child) {
-      border-bottom: none;
-    }
+    height: 1em;
+    display: inline;
+    margin: 0 $major-spacing 0 $major-spacing;
+    border-bottom: none;
   }
   .nav__link {
-    display: inline-block;
-    width: auto;
-    padding: 0;
-    margin: $minor-spacing;
-  }
-  .nav__link-text {
-    color: $theme-primary;
+    display: inline;
   }
 }
