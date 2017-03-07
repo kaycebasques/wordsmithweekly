@@ -10,8 +10,6 @@ effective education?"
 ---
 
 <p>
-  <img src="/imgs/mh.svg" class="content__leader"
-       alt="An Irrelevant Image Of The Mad Hatter"/>
   Warren Buffett's business partner, Charlie Munger, is famed for his ability
   to apply the "big ideas" from across the disciplines to reach conclusions
   that few others can see.

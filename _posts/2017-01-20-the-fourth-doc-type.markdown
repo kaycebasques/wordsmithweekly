@@ -8,9 +8,6 @@ guides, and references. But maybe it's time to get a little heretical and
 introduce a fourth doc type into our establishment."
 ---
 
-<img src="/imgs/mad-tea-party.png" class="content__leader"
-     alt="An Irrelevant Image Of The Mad Tea Party"/>
-
 According to [levels of processing][LOP] theory, the more you have to
 think about something, or the more energy you spend, the better you remember
 it. E.g. a doc with images is better than one without, because the reader

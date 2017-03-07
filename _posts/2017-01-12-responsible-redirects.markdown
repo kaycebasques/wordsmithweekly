@@ -7,9 +7,6 @@ summary: "A pattern for handling redirects when there isn't a one-to-one
 mapping between the old docs and the new."
 ---
 
-<img src="/imgs/alice-cards.svg" class="content__leader"
-     alt="An Irrelevant Image Of Alice"/>
-
 I'm currently undertaking a big refactor of the Chrome DevTools docs. The
 refactor involves a re-org of each of the doc sets, including all of the
 sections within the docs. One of the challenges of this project
