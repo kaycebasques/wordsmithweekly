@@ -1,5 +1,9 @@
 ---
 layout: default
+js: 
+- post
+css:
+- post
 ---
 <h1 class="content__title">{{ page.title }}</h1>
 {% if page.date %}
@@ -9,3 +13,19 @@ layout: default
 <p class="content__summary">{{ page.summary }}</p>
 {% endif %}
 {{ content }}
+<aside class="content__aside content__offline">
+  <p>
+    Like what you're reading? My fancy algorithms detect that your browser
+    can save my site for offline viewing.
+  </p>
+  <button class="content__button content__offline-yes">
+    Save for offline
+  </button>
+  <button class="content__button content__offline-no">
+    Never show again
+  </button>
+  <p class="content__offline-yes-response" style="display:none">Great!</p>
+  <p class="content__offline-no-response" style="display:none">
+    Fine, be that way!
+  </p>
+</aside>

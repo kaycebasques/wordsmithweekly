@@ -28,6 +28,16 @@
     <link rel="stylesheet" type="text/css" href="/css/main.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="/js/main.js" async></script>
+    {% if layout.js %}
+      {% for file in layout.js %}
+        <script src="/js/{{ file }}.js" async></script>
+      {% endfor %}
+    {% endif %}
+    {% if layout.css %}
+      {% for file in layout.css %}
+        <link rel="stylesheet" type="text/css" href="/css/{{ file }}.css"/>
+      {% endfor %}
+    {% endif %}
   </head>
   <body>
     <header class="header header--visible">
