@@ -1,0 +1,36 @@
+---
+layout: default
+js: 
+- post
+css:
+- post
+---
+<h1 class="content__title">{{ page.title }}</h1>
+{% if page.date %}
+<p class="content__date">{{ page.date | date: '%B %d, %Y' }}</p>
+{% endif %}
+{% if page.summary %}
+<p class="content__summary">{{ page.summary }}</p>
+{% endif %}
+{{ content }}
+<aside class="content__aside offline">
+  <p style="margin-top: 0">
+    My fancy algorithms detect that you can save this site for offline
+    viewing. Want to try it? I personally think it has some interesting
+    implications for doc site experiences...
+  </p>
+  <button class="content__button offline__yes">
+    Save for offline
+  </button>
+  <button class="content__button offline__no">
+    Never show again
+  </button>
+  <p class="offline__response offline__yes-response" style="margin-bottom: 0">
+    Cool. You should be able to view the site offline now. Send me questions
+    or feedback at <code>kaycebasques@gmail.com</code> or on Twitter at
+    <a href="https://twitter.com/kaycebasques">@kaycebasques</a>.
+  </p>
+  <p class="offline__response offline__no-response" style="margin-bottom: 0">
+    Got it! You shouldn't see this prompt again.
+  </p>
+</aside>

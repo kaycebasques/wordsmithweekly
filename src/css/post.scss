@@ -1,0 +1,16 @@
+---
+---
+.offline {
+  display: none;  
+}
+.offline--visible {
+  display: block;
+}
+.offline__response {
+  display: none;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.offline__response--visible {
+  display: block;
+}

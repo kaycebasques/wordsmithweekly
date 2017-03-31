@@ -49,6 +49,10 @@ body {
 
 /* Classes */
 
+.hidden {
+  display: none;
+}
+
 .content {
   /* Haven't done the math to explain why it's 17.25em. Should move all these
    * values into variables. */
@@ -64,6 +68,11 @@ body {
   ul {
     padding-left: $major-spacing + $minor-spacing;
   }
+}
+
+.content__aside {
+  background-color: $alternative-background;
+  padding: $major-spacing;
 }
 
 .content__button {
