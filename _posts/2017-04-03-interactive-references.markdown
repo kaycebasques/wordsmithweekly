@@ -9,7 +9,9 @@ summary: Make all the things interactive.
 A while back I advocated for interactive API references. I found a site
 that does just that:
 
-[http://www.javascripture.com/Blob]()
+[http://www.javascripture.com/Blob][example]
+
+[example]: https://wordsmithweekly.com/blog/the-fourth-doc-type
 
 It doesn't look like it's being maintained, though, which is a pity.
 
