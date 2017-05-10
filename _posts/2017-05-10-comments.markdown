@@ -1,0 +1,25 @@
+---
+layout: post
+title: Docs need comments, too
+date: 2017-05-10 13:26:13
+permalink: blog/comments
+summary: Just like source code, sometimes docs need comments, too.
+---
+
+Recently I was documenting an esoteric, complicated feature of the Chrome
+DevTools UI. The source of my knowledge was a reply on the DevTools mailing
+list from one of the DevTools engineers.
+
+In the past I would have documented this feature without leaving a note by
+myself about where I got the info. But then, somebody would file a bug on
+that very section, claiming that it was incorrect. I would
+go back to review the source but not be able to find it. Very frustrating.
+
+So now, whenever I document a tricky section based on hard-to-find knowledge,
+I just add a comment with a link back to the source.
+
+    {% comment %}source: https://... {% endcomment %}
+
+If I worked on a big writer team with many hands touching the docs, this
+approach could also be useful for shared resources. For example, if there's a
+diagram in the doc, I could include a comment with a link to the source file.
