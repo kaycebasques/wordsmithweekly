@@ -14,7 +14,7 @@ disabling JavaScript on the page. The exact syntax for the command is
 `Disable JavaScript`. But you don't need to type all of that. You can
 just type `JS`, and the Command Menu correctly filters out most other commands.
 
-![Disabling JS via the Chrome DevTools Command Menu][demo]
+![Disabling JS via the Chrome DevTools Command Menu][demo]{:.content__img}
 
 [demo]: /imgs/disablejs.gif
 
