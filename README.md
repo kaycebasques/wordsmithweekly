@@ -1,6 +1,6 @@
-# jemplate
+# wordsmithweekly
 
-A barebones Jekyll template.
+Source code for [The Wordsmith Weekly](https://wordsmithweekly.com).
 
 ## Install
 
@@ -10,4 +10,4 @@ A barebones Jekyll template.
 
     # From base directory of repository:
     chmod +x post.sh
-    ./post.sh
+    ./post.sh urlname
