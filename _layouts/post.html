@@ -13,19 +13,24 @@ css:
 <p class="content__summary">{{ page.summary }}</p>
 {% endif %}
 {{ content }}
-<aside class="content__aside content__offline">
+<aside class="content__aside offline">
   <p>
-    Like what you're reading? My fancy algorithms detect that your browser
-    can save my site for offline viewing.
+    My fancy algorithms detect that you can save this site for offline
+    viewing. Want to try it?
   </p>
-  <button class="content__button content__offline-yes">
+  <button class="content__button offline__yes">
     Save for offline
   </button>
-  <button class="content__button content__offline-no">
+  <button class="content__button offline__no">
     Never show again
   </button>
-  <p class="content__offline-yes-response" style="display:none">Great!</p>
-  <p class="content__offline-no-response" style="display:none">
-    Fine, be that way!
+  <p class="offline__response offline__yes-response">
+    Sweet. Email me at <code>kaycebasques@gmail.com</code> or tweet me
+    at <a href="https://twitter.com/kaycebasques">@kaycebasques</a> and
+    let me know how it goes.
+  </p>
+  <p class="offline__response offline__no-response">
+    Fine, be that way! Just kidding, that's cool. I don't really care, I'm
+    just experimenting with it :)
   </p>
 </aside>
