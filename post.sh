@@ -2,7 +2,7 @@
 
 DATE=$(date +%Y-%m-%d)
 TIME=$(date +%H:%M:%S)
-FILE="_posts/$DATE-$1.markdown"
+FILE="src/_posts/$DATE-$1.markdown"
 
 echo "Making a new post..."
 
@@ -15,7 +15,7 @@ echo "---
 layout: post
 title: TODO
 date: $DATE $TIME
-permalink: TODO
+permalink: blog/$1
 summary: TODO
 ---" > $FILE
 
