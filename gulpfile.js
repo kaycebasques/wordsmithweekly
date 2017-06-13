@@ -1,19 +1,23 @@
-var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    serve = require('gulp-connect');
+const gulp = require('gulp'),
+    child = require('child_process'),
+    gutil = require('gulp-util');
 
-gulp.task('serve', function() {
-  serve.server();
+gulp.task('serve', () => {
+  const jekyll = child.spawn('bundle', ['exec', 'jekyll', 'serve']);
+  const logger = (buffer) => {
+    buffer.toString()
+        .split(/\n/)
+        .forEach((message) => gutil.log(message));
+  };
+  jekyll.stdout.on('data', logger);
+  jekyll.stderr.on('data', logger);
 });
 
-gulp.task('scss', function() {
-  gulp.src('css/**/*.scss')
-      .pipe(sass().on('error', sass.logError))
-      .pipe(gulp.dest('css/'));
-});
+// TODO gulp watch... if _site changes, generate service worker
 
-gulp.task('watch', function() {
-  gulp.watch('css/**/*.scss', ['scss']);
+gulp.task('deploy', () => {
+  // TODO build the service worker
+  // TODO deploy to firebase
 });
 
 gulp.task('default', ['serve', 'watch']);
