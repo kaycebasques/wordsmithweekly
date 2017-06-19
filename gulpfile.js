@@ -16,14 +16,15 @@ function buildJekyll() {
 }
 
 function buildSw() {
-  return wb.generateSW({
+  return wb.injectManifest({
     globDirectory: './_site/',
+    globPatterns: ['**\/*'],
+    swSrc: './src/sw.js',
     swDest: './_site/sw.js',
-    staticFileGlobs: ['**\/*'],
   }).then(() => {
-    gutil.log('Service worker generated.');
-  }).catch((err) => {
-    gutil.log('[ERROR] This happened: ' + err);
+    gutil.log('Build Manifest generated.');
+  }).catch((error) => {
+    gutil.log('Error: ' + error);
   });
 }
 

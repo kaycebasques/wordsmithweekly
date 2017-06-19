@@ -10,6 +10,5 @@ description: "The technical writing blog of Kayce Basques."
 # Build settings
 markdown: kramdown
 source: src
-# TODO now that source is src/ dir you don't need to exclude these...
-exclude: [README.md, Gemfile, Gemfile.lock, vendor]
+exclude: [sw.js] # caution: relative to source directory
 keep_files: [sw.js, workbox-sw.prod.v1.0.1.js, workbox-sw.prod.v1.0.1.js.map]
