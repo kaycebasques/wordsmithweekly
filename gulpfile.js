@@ -3,6 +3,18 @@ const gulp = require('gulp'),
     gutil = require('gulp-util'),
     wb = require('workbox-build');
 
+function buildJekyll() {
+  const jekyll = child.spawn('bundle',
+      ['exec', 'jekyll', 'build']);
+  const logger = (buffer) => {
+    buffer.toString()
+        .split(/\n/)
+        .forEach((message) => gutil.log(message));
+  };
+  jekyll.stdout.on('data', logger);
+  jekyll.stderr.on('data', logger);
+}
+
 function buildSw() {
   return wb.generateSW({
     globDirectory: './_site/',
@@ -16,15 +28,7 @@ function buildSw() {
 }
 
 gulp.task('build', () => {
-  const jekyll = child.spawn('bundle',
-      ['exec', 'jekyll', 'build']);
-  const logger = (buffer) => {
-    buffer.toString()
-        .split(/\n/)
-        .forEach((message) => gutil.log(message));
-  };
-  jekyll.stdout.on('data', logger);
-  jekyll.stderr.on('data', logger);
+  buildJekyll();
   buildSw();
 });
 
@@ -50,8 +54,8 @@ gulp.task('build-sw', () => {
 });
 
 gulp.task('deploy', () => {
+  buildJekyll();
   buildSw();
-  // Deploy to Firebase.
   const firebase = child.spawn('firebase',
       ['deploy']);
   const logger = (buffer) => {
