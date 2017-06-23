@@ -1,9 +1,13 @@
 importScripts('workbox-sw.prod.v1.0.1.js');
 
-const workboxSW = new WorkboxSW();
+const workbox = new WorkboxSW();
 
-self.addEventListener('fetch', function (event) {
-  console.log('requested: ', event.request);
+workbox.router.registerRoute(/^[^.]*$/, (args) => {
+  console.log(args);
+  if (args.url.pathname.endsWith('/')) return caches.match(args.url +
+      'index.html');
+  if (args.url.pathname === '') return caches.match('/index.html');
+  return caches.match(args.url + '.html');
 });
 
-workboxSW.precache([]);
+workbox.precache([]);

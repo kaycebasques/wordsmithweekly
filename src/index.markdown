@@ -17,4 +17,4 @@ layout: default
     </li>
   {% endfor %}
 </ol>
-<a href="/blog"><button class="content__button">More posts</button></a>
+<a href="/blog/"><button class="content__button">More posts</button></a>

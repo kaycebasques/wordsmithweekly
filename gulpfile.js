@@ -1,3 +1,5 @@
+// TODO copy workbox-sw as part of build process
+
 const gulp = require('gulp'),
     child = require('child_process'),
     gutil = require('gulp-util'),
