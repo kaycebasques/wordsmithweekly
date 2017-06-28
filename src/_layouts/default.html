@@ -2,10 +2,7 @@
 <html>
   <head>
     <title>
-      {% if page.title %}
-        {{ page.title }} | 
-      {% endif %}
-      {{ site.title }}
+      {% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}
     </title>
     <script>
       if (document.location.hostname === 'wordsmithweekly.com') {
