@@ -5,7 +5,7 @@ title: Subscribe
 
 ## RSS
 
-<a id="rss-url" href="/feed.xml">https://wordsmithweekly.com/feed.xml</a>
+<a id="rss-url" href="/feed.xml">feed.xml</a>
 
 <button id="rss-button" class="content__button">Copy Link To Clipboard</button>
 
