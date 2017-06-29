@@ -1,11 +1,7 @@
+# Accessible in pages via { site.title }
 title: The Wordsmith Weekly
 author: Kayce Basques
 email: kaycebasques@gmail.com
-baseurl: ""
-url: "https://wordsmithweekly.com"
-twitter_username: kaycebasques
-github_username: kaycebasques
-description: "The technical writing blog of Kayce Basques."
 
 # Build settings
 markdown: kramdown
