@@ -48,7 +48,6 @@ body {
   /* Haven't done the math to explain why it's 17.25em. Should move all these
    * values into variables. */
   min-height: calc(100vh - 17.25em);
-  margin-top: 3em;
   margin-left: auto;
   margin-right: auto;
   padding: $major-spacing;
@@ -130,9 +129,6 @@ body {
 }
 
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
   display: flex;
   /* Use em to be able to resize text on scroll */
   height: 3em;
