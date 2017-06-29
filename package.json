@@ -13,6 +13,7 @@
     "gulp-connect": "^5.0.0",
     "gulp-sass": "^2.3.2",
     "gulp-util": "^3.0.8",
+    "webpack": "^3.0.0",
     "workbox-build": "^1.0.1"
   }
 }
