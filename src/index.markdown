@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<h1>Latest posts</h1>
+<h1 class="content__title">Latest posts</h1>
 <ol class="posts">
   {% for post in site.posts limit:5 %}
     <li class="post">
