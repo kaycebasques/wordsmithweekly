@@ -8,3 +8,4 @@ markdown: kramdown
 source: src
 exclude: [sw.js] # caution: relative to source directory
 keep_files: [sw.js, workbox-sw.prod.v1.0.1.js, workbox-sw.prod.v1.0.1.js.map]
+destination: build/jekyll
