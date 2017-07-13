@@ -15,5 +15,10 @@
     "gulp-util": "^3.0.8",
     "webpack": "^3.0.0",
     "workbox-build": "^1.0.1"
+  },
+  "scripts": {
+    "build-jekyll": "bundle exec jekyll build",
+    "build-webpack": "webpack",
+    "build": "npm run build-jekyll && npm run build-webpack"
   }
 }
